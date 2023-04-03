@@ -1,0 +1,170 @@
+/* Set box-sizing to border-box for all elements */
+html {
+    box-sizing: border-box;
+}
+
+/* Reset all margins, paddings and box-sizing to inherit for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font and line-height for the body */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    line-height: 1.4;
+}
+
+/* Set up container for the app */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    overflow-y: auto;
+}
+
+/* Style for app title */
+.app-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    opacity: 0.5;
+}
+
+/* Style for SVG images */
+svg {
+    width: 64px;
+    height: 64px;
+}
+
+  /* Style for todo list */
+.todo-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Style for todo item */
+.todo-item {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style for todo item text */
+.todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+/* Style for done todo item */
+.done span {
+    text-decoration: line-through;
+}
+
+/* Style for checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style for tick mark */
+.tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Style for tick mark before it's checked */
+.tick::before {
+    content: '✓';
+    font-size: 20px;
+    display: none;
+}
+
+/* Style for checked tick mark */
+.done .tick::before {
+    display: inline;
+}
+
+/* Style for delete button */
+.delete-todo {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style for delete button SVG image */
+.delete-todo svg {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}
+
+  /* Style for form */
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    /* définir la largeur du champ de texte à 100% */
+    width: 100%;
+    /* ajouter un rembourrage de 10px autour du champ de texte */
+    padding: 10px;
+    /* ajouter un rayon de bordure de 4px pour adoucir les coins */
+    border-radius: 4px;
+    /* ajouter une bordure de 3px solide de couleur #333 */
+    border: 3px solid #333;
+}
+
+  /* Ajouter ceci en dessous de tous les autres styles */
+.empty-state {
+    /* définir la direction de la flexbox en colonne pour empiler les éléments */
+    flex-direction: column;
+    /* centrer les éléments horizontalement */
+    align-items: center;
+    /* centrer les éléments verticalement */
+    justify-content: center;
+    /* masquer l'élément par défaut */
+    display: none;
+}
+
+.checklist-icon {
+    /* ajouter un espace sous l'icône de la liste de contrôle */
+    margin-bottom: 20px;
+}
+
+.empty-state__title, .empty-state__description {
+    /* ajouter un espace sous le titre et la description de l'état vide */
+    margin-bottom: 20px;
+}
+
+/* Ajouter ceci en dessous des autres styles */
+.todo-list:empty {
+    /* masquer la liste des tâches si elle est vide */
+    display: none;
+}
+
+.todo-list:empty + .empty-state {
+    /* afficher l'état vide s'il n'y a pas de tâches dans la liste */
+    display: flex;
+}
