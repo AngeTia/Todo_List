@@ -17,7 +17,7 @@ function renderTodo(todo) {
         // Si la liste est vide, on la vide également.
         if (todoItems.length === 0) list.innerHTML = '';
         // On sort de la fonction.
-        return 
+        return
     }
 
     // Si la tâche a été cochée, on ajoute la classe "done" à l'élément HTML.
