@@ -1,9 +1,8 @@
-/* Set box-sizing to border-box for all elements */
+/* Définit box-sizing sur border-box pour tous les éléments */
 html {
     box-sizing: border-box;
 }
-
-/* Reset all margins, paddings and box-sizing to inherit for all elements */
+/* Réinitialiser toutes les marges, les rembourrages et le dimensionnement des boîtes à hériter pour tous les éléments */
 *,
 *::before,
 *::after {
@@ -11,8 +10,7 @@ html {
     margin: 0;
     padding: 0;
 }
-
-/* Set default font and line-height for the body */
+/* Définir la police et la hauteur de ligne par défaut pour le corps */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     line-height: 1.4;
@@ -32,7 +30,7 @@ body {
     overflow-y: auto;
 }
 
-/* Style for app title */
+/* Style du titre  */
 .app-title {
     text-align: center;
     margin-bottom: 20px;
@@ -40,19 +38,19 @@ body {
     opacity: 0.5;
 }
 
-/* Style for SVG images */
+/* Style pour SVG images */
 svg {
     width: 64px;
     height: 64px;
 }
 
-  /* Style for todo list */
+  /* Style de la todo list */
 .todo-list {
     list-style: none;
     margin-bottom: 20px;
 }
 
-/* Style for todo item */
+/* Style des todo item */
 .todo-item {
     margin-bottom: 10px;
     width: 100%;
@@ -61,7 +59,7 @@ svg {
     justify-content: space-between;
 }
 
-/* Style for todo item text */
+/* Style pour le text todo item */
 .todo-item span {
     flex-grow: 1;
     margin-left: 10px;
@@ -69,17 +67,17 @@ svg {
     font-size: 22px;
 }
 
-/* Style for done todo item */
+/* Style pour le done todo item */
 .done span {
     text-decoration: line-through;
 }
 
-/* Style for checkbox */
+/* Style de la checkbox */
 input[type="checkbox"] {
     display: none;
 }
 
-/* Style for tick mark */
+/* Style des tick mark */
 .tick {
     width: 30px;
     height: 30px;
@@ -118,7 +116,7 @@ input[type="checkbox"] {
     pointer-events: none;
 }
 
-  /* Style for form */
+  /* Style pour la form */
 form {
     width: 100%;
     display: flex;
